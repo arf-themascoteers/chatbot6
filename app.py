@@ -13,6 +13,8 @@ assistant_id = st.secrets["ASSISTANT_ID"]
 print("API Key is ", api_key)
 print("Assistant ID is", assistant_id)
 
+exit(0)
+
 client = openai.OpenAI(api_key=api_key)
 
 csv_path = "all_small.csv"
