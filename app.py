@@ -7,10 +7,14 @@ from PIL import Image
 from dotenv import load_dotenv; load_dotenv()
 import os
 
-apiKey2 = os.getenv("OPENAI_API_KEY2")
-print("API Key is", apiKey2)
-client = openai.OpenAI(api_key=apiKey2)
-assistant_id = os.getenv("ASSISTANT_ID")
+api_key = st.secrets["OPENAI_API_KEY"]
+assistant_id = st.secrets["ASSISTANT_ID"]
+
+print("API Key is ", api_key)
+print("Assistant ID is", assistant_id)
+
+client = openai.OpenAI(api_key=api_key)
+
 csv_path = "all_small.csv"
 station_name = "Dooen 2"
 
